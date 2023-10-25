@@ -1,0 +1,140 @@
+.leftside {
+  width: 100px;
+  height: 100vh;
+  border-radius: 0px 15px 0 0px;
+  background: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s linear;
+  border-right: 1px solid #fff;
+  position: fixed;
+  z-index: 3;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sticky {
+  display: flex;
+  padding: 25px 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 0 34px;
+  margin-bottom: 34px;
+  border-right: 3px solid transparent;
+  border-left: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s linear;
+
+  div {
+    transition:
+      text-shadow 0.3s linear,
+      color 0.3s linear;
+  }
+}
+.active {
+  border-right: 3px solid #0085ff;
+  border-left: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%),
+    rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+  transition: all 0.3s linear;
+  animation: fadeInTwo 0.3s linear;
+
+  div {
+    color: #0085ff !important;
+    text-shadow: 0px 0px 20px #0085ff;
+  }
+}
+
+.logo{
+  margin-bottom: 26px;
+}
+
+
+.profile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 26px;
+  padding: 0 24px;
+  transition: all 0.3s linear;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  min-width: 170px;
+
+  span:first-child {
+    color: #424f5e;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  span:last-child {
+    color: #9494a0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.leftsideActive {
+  width: 360px;
+  transition: all 0.2s linear;
+
+  a {
+    min-width: 170px;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 36px;
+    color: #000;
+    font-size: 17px;
+    font-weight: 400;
+    gap: 10px;
+    transition:
+      color 0.3s linear,
+      text-shadow 0.3s linear,
+      border 0.3s linear;
+  }
+}
+
+.activeButton {
+  cursor: pointer;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  padding: 14px 0;
+  margin-bottom: 20px;
+  width: 100%;
+
+  svg {
+    transition: all 0.3s;
+    transform: rotateZ(0deg);
+  }
+}
+
+.isActiveButton {
+  justify-content: normal;
+  padding: 14px 36px;
+  svg {
+    transition: all 0.3s;
+    transform: rotateZ(-180deg);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .activeButton {
+    display: none;
+  }
+}
